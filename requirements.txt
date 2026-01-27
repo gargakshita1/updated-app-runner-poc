@@ -2,7 +2,8 @@ fastapi==0.111.1
 uvicorn[standard]==0.25.0
 celery[redis]==5.3.2
 redis==5.3.2
-python-dotenv==1.0.0   # optional, for environment variables
+python-dotenv==1.0.0
+
 
 
 
