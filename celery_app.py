@@ -3,7 +3,7 @@ import time
 
 celery = Celery(
     "worker",
-    broker="redis://redis:6379/0",  # or AWS SQS later
+    broker="redis://redis:6379/0",  # or your Redis host
     backend="redis://redis:6379/0"
 )
 
