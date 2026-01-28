@@ -15,7 +15,9 @@ def run_task():
     logging.info("Triggering background task")
     run_background_task.delay()
     return {"message": "Task started"}
-
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000)
 
 
 
