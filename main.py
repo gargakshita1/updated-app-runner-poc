@@ -1,5 +1,8 @@
+import logging
 from fastapi import FastAPI
 from celery_app import run_background_task
+
+logging.basicConfig(level=logging.INFO)
 
 app = FastAPI()
 
@@ -9,8 +12,10 @@ def health():
 
 @app.post("/run-task")
 def run_task():
+    logging.info("Triggering background task")
     run_background_task.delay()
     return {"message": "Task started"}
+
 
 
 
